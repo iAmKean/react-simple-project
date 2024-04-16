@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### HOW TO INIT A REACT PROJ
+```
+https://legacy.reactjs.org/docs/create-a-new-react-app.html
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+```
+
+### react router
+```
+npm install react-router-dom@6.4.1
+```
