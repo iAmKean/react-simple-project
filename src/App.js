@@ -6,8 +6,9 @@ import Card from './components/card';
 import Nav from './components/nav';
 import { useTime } from './components/useTime';
 
-import Landing from './views/Landing';
-
+import Landing from './views/landing';
+import Pet from './views/pet';
+import Details from './views/pet/[id]';
 import { Link } from "react-router-dom";
 
 function App() {
@@ -38,6 +39,15 @@ function App() {
 							<Link to={`/views/landing`}>
 								landing
 							</Link>
+
+
+							<Link to={`/views/pet`}>
+								Pet
+							</Link>
+
+							<Link to={`/views/pet/11`}>
+								pet detail
+							</Link>
 						</header>
 
 
@@ -45,6 +55,9 @@ function App() {
 
 					{/* add route for other pages to navigate */}
 					<Route path="/views/landing" element={<Landing />} />
+					<Route path="/views/pet" element={<Pet />} />
+					<Route path="/views/pet/:id" element={<Details />} />
+
 				</Routes>
 
 				<div className="time">
