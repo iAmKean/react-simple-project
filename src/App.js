@@ -9,7 +9,6 @@ import { useTime } from './components/useTime';
 import Landing from './views/landing';
 import Pet from './views/pet';
 import Details from './views/pet/[id]';
-import { Link } from "react-router-dom";
 
 function App() {
 	const time = useTime();

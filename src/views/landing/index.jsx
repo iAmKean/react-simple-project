@@ -2,6 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Card from "../../components/card";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { Pagination } from 'swiper/modules';
 export default function Landing() {
 	const tips = [
 		'Research Breeds & Needs: Choose a pet that fits your lifestyle and home.',
@@ -11,6 +20,14 @@ export default function Landing() {
 		`Training & Love: Invest in training and give your furrpal plenty of affection.`,
 		`Commit for Life: Embrace the lifelong commitment of caring for your pet.`,
 	];
+
+	const images = [
+		'/assets/animals/dog.jpg',
+		'/assets/animals/cat.jpg',
+		'http://petsitterwp.dan-fisher.com/wp-content/uploads/2014/10/slide2.jpg',
+		'http://petsitterwp.dan-fisher.com/wp-content/uploads/2014/10/slide3.jpg',
+	];
+
 	const [tipList, setTipList] = useState(tips)
 
 	const bgStyle = {
@@ -18,7 +35,7 @@ export default function Landing() {
 		"backgroundRepeat": "repeat",
 		"backgroundAttachment": "fixed",
 		"backgroundPosition": "center top",
-		"backgroundSize": "cover !important",
+		"backgroundSize": "100% 100%",
 	}
 
 	return (
@@ -26,10 +43,19 @@ export default function Landing() {
 		<div className="p-4 md:p-6 min-h-[calc(100vh-80px)] flex justify-center items-center" style={bgStyle}>
 
 			<Card className={`md:min-h-[calc(100vh-140px)] block md:flex w-full md:p-6`}>
-				<div className="hidden md:flex md:flex-1">
-					image
+				<div className="hidden md:flex md:flex-1 overflow-hidden">
+					<Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+						{
+							images.map((item, index) => {
+
+								return <SwiperSlide key={index}><img src={item} alt="animal" /></SwiperSlide>
+							})
+						}
+
+
+					</Swiper>
 				</div>
-				<div className="bg-[#454545] h-full p-4 rounded-[5px] m-auto text-white md:w-[40%]">
+				<div className="bg-[#454545] h-full p-4 rounded-[5px] m-auto text-white md:w-[30%] md:ml-6">
 					<div className="mb-6 font-bold text-center text-[18px] mt-2">
 						Get a Furrpal!
 					</div>

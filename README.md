@@ -84,3 +84,9 @@ npm start
 ```
 npm install react-router-dom@6.4.1
 ```
+
+### swiper
+```
+https://swiperjs.com/get-started
+npm install swiper
+```
