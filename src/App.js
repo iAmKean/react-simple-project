@@ -26,9 +26,9 @@ function App() {
 					<Route path="/views/pet/:id" element={<Details />} />
 				</Routes>
 
-				<div className="time">
+				{/* <div className="time pr-6">
 					<span>{time.toLocaleString()}</span>
-				</div>
+				</div> */}
 			</BrowserRouter>
 		</div>
 	);

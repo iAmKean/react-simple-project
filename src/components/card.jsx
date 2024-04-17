@@ -1,7 +1,7 @@
-export default function Card() {
+export default function Card(props) {
 	return (
-		<div>
-			Card
+		<div className={`border-[white] border-[1px] p-2 rounded-[5px] ${props.className}`}>
+			{props.children}
 		</div>
 	)
 }
