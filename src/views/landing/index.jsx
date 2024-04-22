@@ -40,7 +40,7 @@ export default function Landing() {
 
 	return (
 
-		<div className="p-4 md:p-6 min-h-[calc(100vh-80px)] flex justify-center items-center" style={bgStyle}>
+		<div className="p-4 md:p-6 min-h-[calc(100vh-72px)] flex justify-center items-center" style={bgStyle}>
 
 			<Card className={`md:min-h-[calc(100vh-140px)] block md:flex w-full md:p-6`}>
 				<div className="hidden md:flex md:flex-1 overflow-hidden">
@@ -66,7 +66,7 @@ export default function Landing() {
 
 					<div className="mb-4">
 						{
-							tipList.length == 0 ? null :
+							tipList.length === 0 ? null :
 								<ul className="pl-6">
 									{
 										tipList.map((item, index) => {

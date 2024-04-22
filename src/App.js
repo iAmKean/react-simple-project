@@ -1,17 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Card from './components/card';
 import Nav from './components/nav';
-import { useTime } from './components/useTime';
+// import { useTime } from './components/useTime';
 
 import Landing from './views/landing';
 import Pet from './views/pet';
 import Details from './views/pet/[id]';
 
 function App() {
-	const time = useTime();
+	// const time = useTime();
 	return (
 		<div className="App h-[100vh]" style={{ fontFamily: "PingFang-SC" }}>
 			<BrowserRouter>
