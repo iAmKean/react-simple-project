@@ -90,3 +90,11 @@ npm install react-router-dom@6.4.1
 https://swiperjs.com/get-started
 npm install swiper
 ```
+
+### daisyui
+```
+https://daisyui.com/docs/install/
+
+for icons
+https://icon-sets.iconify.design/
+```

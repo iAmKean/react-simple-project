@@ -36,7 +36,7 @@ export default function Pet() {
 		<div className="p-4 md:p-6 min-h-[calc(100vh-80px)]" style={bgStyle}>
 			<div className="mb-4 block md:flex">
 				<div>
-					<form className="max-w-sm mx-auto md:w-[300px]">
+					<form className="mx-auto w-full md:w-[300px]">
 						<div className="mb-2">
 							<label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select species</label>
 							<select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">

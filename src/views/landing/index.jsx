@@ -41,52 +41,53 @@ export default function Landing() {
 	return (
 
 		<div className="p-4 md:p-6 min-h-[calc(100vh-72px)] flex justify-center items-center" style={bgStyle}>
+			<div className="xl:w-[1200px] xl:m-auto">
+				<Card className={`md:min-h-[calc(100vh-140px)] block md:flex w-full md:p-6`}>
+					<div className="hidden lg:flex lg:w-[500px] overflow-hidden">
+						<Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+							{
+								images.map((item, index) => {
 
-			<Card className={`md:min-h-[calc(100vh-140px)] block md:flex w-full md:p-6`}>
-				<div className="hidden md:flex md:flex-1 overflow-hidden">
-					<Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-						{
-							images.map((item, index) => {
+									return <SwiperSlide key={index}><img src={item} alt="animal" /></SwiperSlide>
+								})
+							}
 
-								return <SwiperSlide key={index}><img src={item} alt="animal" /></SwiperSlide>
-							})
-						}
+						</Swiper>
+					</div>
+					<div className="bg-[#454545] h-full p-4 rounded-[5px] m-auto text-white lg:w-[calc(100%-500px)] md:ml-6">
+						<div className="mb-6 font-bold text-center text-[18px] mt-2">
+							Get a Furrpal!
+						</div>
 
+						<div className="mb-4">
+							Adopting a furry friend is a joyful journey filled with love and companionship. Here’s how you can welcome a new furrpal into your life:
+						</div>
 
-					</Swiper>
-				</div>
-				<div className="bg-[#454545] h-full p-4 rounded-[5px] m-auto text-white md:w-[30%] md:ml-6">
-					<div className="mb-6 font-bold text-center text-[18px] mt-2">
-						Get a Furrpal!
+						<div className="mb-4">
+							{
+								tipList.length === 0 ? null :
+									<ul className="pl-6">
+										{
+											tipList.map((item, index) => {
+												return <li key={index} className="[&:not(:last-child)]:mb-2 text-left list-disc">{item}</li>;
+											})
+										}
+									</ul>
+							}
+						</div>
+
+						<div>
+							<Link to={`/views/pet`} className="flex justify-center w-full">
+								<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-full md:w-80">
+									Adopt Now!
+								</button>
+							</Link>
+						</div>
 					</div>
 
-					<div className="mb-4">
-						Adopting a furry friend is a joyful journey filled with love and companionship. Here’s how you can welcome a new furrpal into your life:
-					</div>
+				</Card>
 
-					<div className="mb-4">
-						{
-							tipList.length === 0 ? null :
-								<ul className="pl-6">
-									{
-										tipList.map((item, index) => {
-											return <li key={index} className="[&:not(:last-child)]:mb-2 text-left list-disc">{item}</li>;
-										})
-									}
-								</ul>
-						}
-					</div>
-
-					<div>
-						<Link to={`/views/pet`} className="flex justify-center w-full">
-							<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-full md:w-80">
-								Adopt Now!
-							</button>
-						</Link>
-					</div>
-				</div>
-
-			</Card>
+			</div>
 
 		</div>
 	)
